@@ -8,7 +8,7 @@ const HomePage = () => (
       query HomePage {
         contentfulHomePage {
           title
-          date
+          date(formatString: "MMMM DD, YYYY")
           content {
             content
           }
