@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
+import * as Markdown from 'react-markdown'
 
 const HomePage = () => (
   <StaticQuery
@@ -25,7 +26,7 @@ const HomePage = () => (
         <div style={{ margin: `3rem auto`, maxWidth: 1024 }}>
           <h1>{title}</h1>
           <small>Created on {date}</small>
-          <p>{content}</p>
+          <Markdown source={content} />
         </div>
       </>
     )}
